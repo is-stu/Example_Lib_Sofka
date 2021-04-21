@@ -3,15 +3,18 @@ package tewar.demo.domain.solicitante;
 import co.com.sofka.domain.generic.AggregateEvent;
 import tewar.demo.domain.solicitante.entities.Fine;
 import tewar.demo.domain.solicitante.entities.Person;
-import tewar.demo.domain.solicitante.entities.ReserveID;
+import tewar.demo.domain.solicitante.values.ApplicantId;
+import tewar.demo.domain.solicitante.values.ReserveID;
 
-public class Solicitante extends AggregateEvent<SolicitanteId>{
+public class Applicant extends AggregateEvent<ApplicantId> {
 
     protected Person person;
     protected Fine fine;
     protected ReserveID reserveID;
 
-    public Solicitante(SolicitanteId entityId) {
+    public Applicant(ApplicantId entityId, Person person, Fine fine) {
         super(entityId);
+        this.person = person;
+        this.fine = fine;
     }
 }
