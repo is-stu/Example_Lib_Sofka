@@ -20,4 +20,16 @@ public class Person extends Entity<PersonId> {
         this.name = name;
         this.age = age;
     }
+
+    public PersonId getPersonId() {
+        return personId;
+    }
+
+    public Name getName() {
+        return name;
+    }
+
+    public Age getAge() {
+        return age;
+    }
 }
