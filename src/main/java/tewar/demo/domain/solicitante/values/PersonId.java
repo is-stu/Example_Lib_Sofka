@@ -6,12 +6,12 @@ import java.util.Objects;
 
 public class PersonId extends Identity {
 
-    private final Integer id;
-
-
-    public PersonId(String uuid, Integer id) {
+    public PersonId(String uuid) {
         super(uuid);
-        this.id = Objects.requireNonNull(id);
+    }
+
+    public static PersonId of(String uuid) {
+        return new PersonId(uuid);
     }
 
 }
