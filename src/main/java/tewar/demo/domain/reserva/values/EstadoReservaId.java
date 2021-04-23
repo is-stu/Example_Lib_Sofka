@@ -1,4 +1,4 @@
-package tewar.demo.reserva.values;
+package tewar.demo.domain.reserva.values;
 
 import co.com.sofka.domain.generic.Identity;
 

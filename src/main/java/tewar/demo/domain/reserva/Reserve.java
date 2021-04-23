@@ -1,11 +1,11 @@
-package tewar.demo.reserva;
+package tewar.demo.domain.reserva;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import tewar.demo.domain.solicitante.values.ReserveID;
-import tewar.demo.reserva.entities.EstadoReserva;
-import tewar.demo.reserva.events.ReserveCreated;
-import tewar.demo.reserva.values.DuracionPrestamo;
-import tewar.demo.reserva.values.FechaPrestamo;
+import tewar.demo.domain.reserva.entities.EstadoReserva;
+import tewar.demo.domain.reserva.events.ReserveCreated;
+import tewar.demo.domain.reserva.values.DuracionPrestamo;
+import tewar.demo.domain.reserva.values.FechaPrestamo;
 
 public class Reserve extends AggregateEvent<ReserveID> {
 

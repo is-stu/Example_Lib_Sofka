@@ -1,7 +1,7 @@
-package tewar.demo.reserva;
+package tewar.demo.domain.reserva;
 
 import co.com.sofka.domain.generic.EventChange;
-import tewar.demo.reserva.events.ReserveCreated;
+import tewar.demo.domain.reserva.events.ReserveCreated;
 
 public class ReserveEventChange extends EventChange {
     public ReserveEventChange(Reserve reserve) {

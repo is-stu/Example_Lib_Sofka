@@ -1,9 +1,9 @@
-package tewar.demo.reserva.events;
+package tewar.demo.domain.reserva.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import tewar.demo.reserva.entities.EstadoReserva;
-import tewar.demo.reserva.values.DuracionPrestamo;
-import tewar.demo.reserva.values.FechaPrestamo;
+import tewar.demo.domain.reserva.entities.EstadoReserva;
+import tewar.demo.domain.reserva.values.DuracionPrestamo;
+import tewar.demo.domain.reserva.values.FechaPrestamo;
 
 public class ReserveCreated extends DomainEvent {
 

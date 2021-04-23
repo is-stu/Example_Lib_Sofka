@@ -1,7 +1,7 @@
-package tewar.demo.reserva.entities;
+package tewar.demo.domain.reserva.entities;
 
 import co.com.sofka.domain.generic.Entity;
-import tewar.demo.reserva.values.EstadoReservaId;
+import tewar.demo.domain.reserva.values.EstadoReservaId;
 
 public class EstadoReserva extends Entity<EstadoReservaId> {
 
