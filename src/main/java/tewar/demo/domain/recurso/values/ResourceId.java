@@ -4,8 +4,11 @@ import co.com.sofka.domain.generic.Identity;
 
 public class ResourceId extends Identity {
 
-    public ResourceId(String uuid) {
+    private ResourceId(String uuid) {
         super(uuid);
+    }
+
+    public ResourceId() {
     }
 
     public static ResourceId of(String uuid) {

@@ -19,7 +19,7 @@ class CreateResourceUseCaseTest {
     @Test
     public void createNewResource() {
 
-        var id = new ResourceId("111");
+        var id = ResourceId.of("111");
         var category = new Category(new CategoryId("123"), "Laptop");
         var resourceName = new ResourceName("Hp pro book");
         var description = new Description("Just a laptop");

@@ -16,6 +16,6 @@ public class CreateResourceUseCase extends UseCase<RequestCommand<CreateResource
                 command.getResourceName(), command.getDescription(), command.getBarCode(),
                 command.getState());
 
-        emit().onSuccess(new ResponseEvents(resource.getUncommittedChanges()));
+        emit().onResponse(new ResponseEvents(resource.getUncommittedChanges()));
     }
 }

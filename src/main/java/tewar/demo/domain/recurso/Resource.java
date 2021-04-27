@@ -1,10 +1,13 @@
 package tewar.demo.domain.recurso;
 
 import co.com.sofka.domain.generic.AggregateEvent;
-import co.com.sofka.domain.generic.Identity;
+import co.com.sofka.domain.generic.DomainEvent;
 import tewar.demo.domain.recurso.entities.Category;
 import tewar.demo.domain.recurso.events.ResourceCreated;
+import tewar.demo.domain.recurso.events.UpdatedResource;
 import tewar.demo.domain.recurso.values.*;
+
+import java.util.List;
 
 public class Resource extends AggregateEvent<ResourceId> {
 
@@ -23,5 +26,15 @@ public class Resource extends AggregateEvent<ResourceId> {
         super(entityId);
         subscribe(new ResourceEventChange(this));
 
+    }
+
+    public static Resource from(ResourceId entityId, List<DomainEvent> events) {
+        var resource = new Resource(entityId);
+        events.forEach(resource::applyEvent);
+        return resource;
+    }
+
+    public void updateResource(Category category, ResourceName resourceName, Description description, State state){
+        appendChange(new UpdatedResource(category,resourceName,description,state)).apply();
     }
 }

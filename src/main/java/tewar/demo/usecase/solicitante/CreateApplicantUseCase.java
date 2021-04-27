@@ -17,6 +17,6 @@ public class CreateApplicantUseCase extends UseCase<RequestCommand<CreateApplica
                 command.getFine(),
                 command.getReserveID());
 
-        emit().onSuccess(new ResponseEvents(applicant.getUncommittedChanges()));
+        emit().onResponse(new ResponseEvents(applicant.getUncommittedChanges()));
     }
 }
