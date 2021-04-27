@@ -2,19 +2,19 @@ package tewar.demo.domain.solicitante.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Objects;
 
-public class EndDate implements ValueObject<Date> {
+public class EndDate implements ValueObject<LocalDate> {
 
-    private final Date date;
+    private final LocalDate date;
 
-    public EndDate(Date date) {
+    public EndDate(LocalDate date) {
         this.date = Objects.requireNonNull(date);
     }
 
     @Override
-    public Date value() {
+    public LocalDate value() {
         return date;
     }
 }

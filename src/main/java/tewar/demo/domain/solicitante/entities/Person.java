@@ -8,22 +8,17 @@ import tewar.demo.domain.solicitante.values.PersonId;
 
 public class Person extends Entity<PersonId> {
 
-    private final PersonId personId;
     private final DocumentType documentType;
     private final Name name;
     private final Age age;
 
-    public Person(PersonId entityId, PersonId personId, DocumentType documentType, Name name, Age age) {
+    public Person(PersonId entityId, DocumentType documentType, Name name, Age age) {
         super(entityId);
-        this.personId = personId;
         this.documentType = documentType;
         this.name = name;
         this.age = age;
     }
 
-    public PersonId getPersonId() {
-        return personId;
-    }
 
     public Name getName() {
         return name;

@@ -8,15 +8,14 @@ import tewar.demo.domain.solicitante.values.Reason;
 
 public class Fine extends Entity<FineId> {
 
-    private final FineId fineId;
+
     private final Reason reason;
     private final BeginDate beginDate;
     private final EndDate endDate;
 
 
-    public Fine(FineId entityId, FineId fineId, Reason reason, BeginDate beginDate, EndDate endDate) {
+    public Fine(FineId entityId, Reason reason, BeginDate beginDate, EndDate endDate) {
         super(entityId);
-        this.fineId = fineId;
         this.reason = reason;
         this.beginDate = beginDate;
         this.endDate = endDate;
