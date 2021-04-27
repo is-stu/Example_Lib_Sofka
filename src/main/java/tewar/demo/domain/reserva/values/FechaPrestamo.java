@@ -2,19 +2,19 @@ package tewar.demo.domain.reserva.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Objects;
 
-public class FechaPrestamo implements ValueObject<Date> {
+public class FechaPrestamo implements ValueObject<LocalDate> {
 
-    private final Date date;
+    private final LocalDate date;
 
-    public FechaPrestamo(Date date) {
+    public FechaPrestamo(LocalDate date) {
         this.date = Objects.requireNonNull(date);
     }
 
     @Override
-    public Date value() {
+    public LocalDate value() {
         return date;
     }
 
